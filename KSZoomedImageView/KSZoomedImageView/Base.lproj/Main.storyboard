@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="an5-ro-iWB">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="NO" initialViewController="an5-ro-iWB">
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Zoomed Image View Demo View Controller-->
@@ -18,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-Ic-MTs" customClass="KSZoomedImageView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-Ic-MTs" customClass="KSZoomedImageView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zBI-Ic-MTs" secondAttribute="trailing" id="1em-6j-k0Q"/>
                             <constraint firstItem="zBI-Ic-MTs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4u6-iK-o2y"/>
@@ -33,7 +30,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zBI-Ic-MTs" secondAttribute="bottom" id="Mzp-S3-qi1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nVb-L9-aUT"/>
+                    <navigationItem key="navigationItem" id="nVb-L9-aUT">
+                        <barButtonItem key="rightBarButtonItem" title="Show Picker" id="yzY-S0-VRB">
+                            <connections>
+                                <action selector="showPickerButtonTapped:" destination="BYZ-38-t0r" id="GDX-Oo-ck4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="KSZoomedImageView" destination="zBI-Ic-MTs" id="0qK-hK-ajQ"/>
                     </connections>

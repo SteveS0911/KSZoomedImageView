@@ -32,6 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - IBActions -
+
+- (IBAction)showPickerButtonTapped:(UIBarButtonItem *)sender {
+    
+    [self showImagePickerViewController];
+    
+}
+
 # pragma mark - Private -
 
 - (void)showImagePickerViewController {

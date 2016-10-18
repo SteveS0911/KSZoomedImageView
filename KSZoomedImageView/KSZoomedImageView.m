@@ -92,9 +92,9 @@
     
     _zoomImageView.transform = CGAffineTransformIdentity;
     
-    self.contentOffset = CGPointMake(0, 0);
-    
     self.contentSize = CGSizeZero;
+    
+    self.contentOffset = CGPointMake(0, 0);
     
     CGFloat sizeWidth = (image.size.width > self.frame.size.width) ? self.frame.size.width : image.size.width;
     
