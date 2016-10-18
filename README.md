@@ -1,4 +1,4 @@
-# KSZoomedImageView
+# KSZoomedImageView: iOS
 
 An image view that can be zoomed in and out
 
